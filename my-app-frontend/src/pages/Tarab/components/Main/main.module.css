@@ -1,0 +1,10 @@
+.main_container {
+    flex: 1;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
+    overflow-y: auto;
+}

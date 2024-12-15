@@ -1,0 +1,172 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    background-color: #121212;
+    margin: auto auto;
+    padding: 20px;
+}
+.logo_tarab {
+    width: 100px;
+    user-select: none;
+    margin: 10px;
+}
+.progress_container {
+    width: 50%;
+    background-color: #1f1f1f;
+    height: 4px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.progress_bar {
+    width: 100%;
+    height: 100%;
+    background-color: #1ed760;
+    border-radius: 2px;
+}
+.step {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    width: 50%;
+}
+.step div:first-child {
+    position: relative;
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+    border-radius: 50%;
+}
+.step div:first-child:hover {
+    background-color: #1f1f1f;
+}
+.step div:first-child:hover img {
+    filter: invert(100%);
+}
+.step div:first-child img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30px;
+    width: 30px;
+    filter: invert(70%) brightness(85%);
+}
+.step div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 5px;
+}
+.step div span {
+    font-size: .9em;
+    color: #b3b3b3;
+}
+.step div h2 {
+    font-size: 1em;
+    font-weight: 700;
+    color: #fff;
+}
+.form_box {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 30px 0;
+}
+.checkbox_box {
+    width: 50%;
+    background-color: #1f1f1f;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+}
+.checkbox_box input[type="checkbox"] {
+    appearance: none; 
+    -webkit-appearance: none; 
+    width: 20px;
+    height: 20px;
+    background-color: #121212;
+    border: 2px solid #b3b3b3;
+    border-radius: 2px;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+.checkbox_box input[type="checkbox"]:hover {
+    border: 2px solid #1ed760;
+}
+input[type="checkbox"]:checked {
+    background-color: #1ed760;
+    border: 2px solid #1ed760;
+}
+input[type="checkbox"]::before {
+    content: ' ✔ ';
+    display: block;
+    text-align: center;
+    color: #121212;
+    font-size: 1em;
+    padding: 0 2px;
+    visibility: hidden;
+}
+input[type="checkbox"]:checked::before {
+    visibility: visible;
+}
+.checkbox_box label {
+    font-size: .9em;
+    font-weight: 500;
+    color: #fff;
+}
+.terms {
+    width: 50%;
+    margin: 20px 0;
+    font-size: .8em;
+    font-weight: 500;
+    color: #fff;
+}
+.terms p {
+    margin: 10px 0;
+}
+.terms a {
+    color: #1ed760;
+    text-decoration: underline;
+}
+.btn {
+    background-color: #1ed760;
+    border: none;
+    color: #121212;
+    padding: 20px;
+    border-radius: 30px;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    width: 50%;
+    margin-top: 10px;
+}
+.btn:hover {
+    transform: scale(1.02);
+}
+.captcha {
+    margin-top: 20px;
+    font-size: .8em;
+    color: #b3b3b3;
+    text-align: center;
+}
+.captcha a {
+    color: #1ed760;
+    text-decoration: none;
+}

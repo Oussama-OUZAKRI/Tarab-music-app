@@ -1,0 +1,49 @@
+.auth-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.register_btn, .login_btn {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    padding: 15px 20px; 
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-items: center;
+}
+.register_btn {
+    background-color: transparent;
+    color: #b3b3b3;
+}
+.login_btn {
+    background-color: #fff;
+    color: #000;
+}
+.register_btn:hover, .login_btn:hover {
+    transform: scale(1.05);
+}
+.register_btn:hover {
+    color: #fff;
+}
+.icon {
+    display: none;
+}
+.register_btn:hover .register {
+    filter: brightness(0) saturate(100%) invert(100%);
+}
+@media (max-width: 900px) {
+    .register_btn, .login_btn {
+        padding: 10px; 
+    }
+    .button-text {
+        display: none;
+    }
+    .icon {
+        display: inline-block;
+    }
+}

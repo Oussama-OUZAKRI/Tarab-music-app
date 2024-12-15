@@ -1,0 +1,225 @@
+.side-bar {
+    width: 25%;
+    background-color: #121212;
+    border-radius: 10px;
+    padding: 10px;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+    gap: 10px;
+}
+.side-bar-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    margin-bottom: 25px;
+}
+.biblio-container{
+    position: relative;
+    background-color: transparent;
+    color: #b3b3b3;
+    font-size: .9em;
+    font-weight: 600;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.biblio-container:hover {
+    color: #fff;
+}
+.biblio-container:hover img {
+    filter: brightness(0) saturate(100%) invert(100%);
+}
+.add-btn {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.biblio-container img, .add-btn img{
+    width: 24px;
+    filter: invert(88%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(83%) contrast(75%);
+}
+.add-btn:hover {
+    background-color: #1f1f1f;
+}
+.add-btn:hover img {
+    transform: scale(1.1);
+    filter: brightness(0) saturate(100%) invert(100%);
+}
+.biblio-container::after {
+    content: 'Réduire la Bibliothèque';
+    margin-top: 12px;
+}
+.add-btn::after {
+    content: 'Créer une playlist ou un dossier';
+    margin-top: 5px;
+}
+.add-btn::after, .biblio-container::after{
+    font-size: .8em;
+    font-weight: 600;
+    width: max-content;
+    background-color: #1f1f1f;
+    color: #fff;
+    position: absolute;
+    top: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    opacity: 0;
+    visibility: hidden;
+}
+.add-btn:hover:after, .biblio-container:hover:after {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .3s ease-out, visibility .3s ease-in;
+}
+.scroll-box {
+    flex-grow: 1;
+    height: auto;
+    overflow-y: hidden;
+    transition: overflow-y 0.5s ease-in-out;
+}
+.scroll-box:hover {
+    overflow-y: scroll;
+}
+.scroll-box::-webkit-scrollbar {
+    width: 5px;
+}
+.scroll-box::-webkit-scrollbar-track {
+    background-color: #b3b3b3; 
+}
+.scroll-box::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+.playlist-box, .podcast-box {
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+}
+.playlist-box h4, .playlist-box p, .podcast-box h4, .podcast-box p {
+    color: #fff;
+    margin: 5px 0;
+}
+.playlist-box p, .podcast-box p {
+    font-size: .9em;
+}
+.playlist-box button, .podcast-box button {
+    font-size: 1em;
+    font-weight: 600;
+    background-color: #fff;
+    color: #121212;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+.playlist-box button:hover, .podcast-box button:hover {
+    transform: scale(1.05);
+}
+.side-bar-links {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+.side-bar-links a {
+    font-size: .8em;
+    color: #b3b3b3;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 2px 10px;
+    margin-left: 0;
+}
+.translate-btn {
+    font-size: .9em;
+    font-weight: 600;
+    background-color: transparent;
+    color: #b3b3b3;
+    border: 2px solid #b3b3b3;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.translate-btn img {
+    width: 24px;
+    margin-right: 10px;
+    filter: invert(88%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(83%) contrast(75%);
+}
+.translate-btn:hover {
+    color: #fff;
+    border: 2px solid #fff;
+}
+.translate-btn:hover img {
+    filter: brightness(0) saturate(100%) invert(100%);
+}
+@media (max-width: 600px) {
+    .side-bar {
+        width: 80%;
+    }
+    .side-bar-head {
+        flex-direction: column;
+    }
+    .biblio-container img, .add-btn img {
+        width: 20px;
+    }
+    .translate-btn {
+        font-size: .8em;
+        padding: 15px;
+        margin: 5px;
+        font-size: 0.8em;
+    }
+    .playlist-box button, .podcast-box button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+    .side-bar-links {
+        margin: 10px;
+    }
+    .side-bar-links a {
+        font-size: 0.7em;
+    }
+}
+@media (min-width: 600px) and (max-width: 1024px) {
+    .side-bar {
+        width: 40%;
+    }
+    .side-bar-head {
+        flex-direction: column;
+    }
+    .biblio-container img, .add-btn img {
+        width: 22px;
+    }
+    .translate-btn {
+        font-size: .7em;
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    .playlist-box button, .podcast-box button {
+        padding: 10px 20px;
+    }
+    .side-bar-links {
+        margin: 5px;
+    }
+    .side-bar-links a {
+        font-size: 0.7em;
+    }
+}

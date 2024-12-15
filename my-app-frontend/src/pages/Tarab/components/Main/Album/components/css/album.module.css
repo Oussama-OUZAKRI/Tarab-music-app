@@ -1,0 +1,68 @@
+.card {
+    display: inline-block;
+    background-color: transparent;
+    border-radius: 10px;
+    width: 200px;
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    text-wrap: auto;
+}
+.card:hover {
+    background: linear-gradient(transparent, #1f1f1f);
+}
+.img_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+.img_box {
+    width: 160px;
+    height: 160px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px 2px #000;
+}
+.card a {
+    display: block;
+    margin-top: 10px;
+    font-size: .9em;
+    font-weight: 500;
+    color: #fff;
+}
+.card a:hover {
+    text-decoration: underline;
+}
+.card span {
+    display: block;
+    font-size: 14px;
+    color: #b3b3b3;
+    margin-top: 5px;
+}
+.play_button {
+    position: absolute;
+    bottom: 7px;
+    right: 12px;
+    width: 50px;
+    height: 0;
+    border-radius: 50%;
+    background-color: #1DB954;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: height .2s ease, transform .2s ease;
+    box-shadow: 0 5px 10px 1px #121212;
+    visibility: hidden;
+    overflow: hidden;
+}
+.card:hover .play_button {
+    height: 50px;
+    visibility: visible;
+    transform: translateY(0);
+}
+.play_icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 3px;
+}

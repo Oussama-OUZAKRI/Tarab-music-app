@@ -1,0 +1,258 @@
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    background-color: #121212;
+    margin: auto auto;
+    padding: 20px;
+    user-select: none;
+}
+.logo_tarab {
+    width: 100px;
+    user-select: none;
+    margin: 10px;
+}
+.progress_container {
+    width: 50%;
+    background-color: #1f1f1f;
+    height: 4px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.progress_bar {
+    width: 33%; /* Correspond à l'étape 1 sur 3 (33%) */
+    height: 100%;
+    background-color: #1ed760;
+    border-radius: 2px;
+}
+.step {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    width: 50%;
+}
+.step div:first-child {
+    position: relative;
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+    border-radius: 50%;
+}
+.step div:first-child:hover {
+    background-color: #1f1f1f;
+}
+.step div:first-child:hover img {
+    filter: invert(100%);
+}
+.step div:first-child img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30px;
+    width: 30px;
+    filter: invert(70%) brightness(85%);
+}
+.step div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 5px;
+}
+.step div span {
+    font-size: .9em;
+    color: #b3b3b3;
+}
+.step div h2 {
+    font-size: 1em;
+    font-weight: 700;
+    color: #fff;
+}
+.form_box {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+.input_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 5px;
+    width: 50%;
+    margin-bottom: 20px;
+}
+.label {
+    font-size: .8em;
+    font-weight: 600;
+    color: #fff;
+}
+.password_field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.password_field input {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: none;
+    outline: none;
+    color: #fff;
+    width: 100%;
+    padding: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+input[type="password"]::-ms-reveal {
+    display: none;
+}
+input[type="password"]::-webkit-textfield-decoration-container {
+    display: none; /* Masquer sur WebKit */
+  }
+.password_field input::placeholder {
+    color: #b3b3b3;
+    font-size: 1em;
+}
+.toggle_password {
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+.toggle_password:hover {
+    background-color: #1f1f1f;
+}
+.toggle_password img {
+    height: 30px;
+    width: 30px;
+    filter: invert(70%) brightness(85%);
+}
+.toggle_password:hover img {
+    filter: invert(100%);
+}
+.password_field.focused_valid {
+    border: 2px solid #fff;
+    outline: 1px solid #fff;
+}
+.password_field.focused_invalid {
+    border: 2px solid #E53935;
+    outline: 1px solid #E53935;
+}
+.error_box {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 0;
+    margin: auto;
+}
+.error_icn{
+    width: 25px;
+    height: 25px;
+}
+.error_msg {
+    font-size: 0.8em; 
+    color: #E53935; 
+    margin: 0;
+}
+.valid_input {
+    border: 2px solid #b3b3b3;
+    outline: none;
+}
+.valid_input:hover {
+    border: 2px solid #fff;
+}
+.valid_input:focus {
+    border: 2px solid #fff;
+    outline: 1px solid #fff;
+}
+.invalid_input {
+    border: 2px solid #E53935;
+    outline: none;
+}
+.invalid_input:focus {
+    outline: 1px solid #E53935;
+}
+.requirements_box {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.requirements_box h2 {
+    font-size: .9em;
+    font-weight: 700;
+    color: #fff;
+}
+.password_requirements {
+    list-style: none;
+    text-align: left;
+    font-size: .8em;
+    font-weight: 600;
+    color: #fff;
+}
+.btn {
+    background-color: #1ed760;
+    border: none;
+    color: #121212;
+    padding: 20px;
+    border-radius: 30px;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    width: 50%;
+    margin-top: 10px;
+}
+.btn:hover {
+    transform: scale(1.02);
+}
+.captcha {
+    width: 50%;
+    margin-top: 20px;
+    font-size: .8em;
+    color: #b3b3b3;
+    text-align: center;
+}
+.captcha a {
+    color: #1ed760;
+    text-decoration: none;
+}
+@media screen and (max-width: 750px) {
+    .container {
+        width: 100%;
+    }
+    .progress_container, .step, .input_box,
+    .requirements_box, .btn, .captcha {
+        width: 80%;
+    }
+}
+@media screen and (min-width: 750px) and (max-width: 1100px) {
+    .progress_container, .step, .input_box,
+    .requirements_box, .btn, .captcha {
+        width: 80%;
+    }
+}

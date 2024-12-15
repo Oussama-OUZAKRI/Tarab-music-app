@@ -1,0 +1,282 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    background-color: #121212;
+    margin: auto auto;
+    padding: 20px;
+    user-select: none;
+}
+.logo_tarab {
+    width: 100px;
+    user-select: none;
+    margin: 10px;
+}
+.progress_container {
+    width: 50%;
+    background-color: #1f1f1f;
+    height: 4px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.progress_bar {
+    width: 66%; /* Correspond à l'étape 1 sur 3 (33%) */
+    height: 100%;
+    background-color: #1ed760;
+    border-radius: 2px;
+}
+.step {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+}
+.step div:first-child {
+    position: relative;
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+    border-radius: 50%;
+}
+.step div:first-child:hover {
+    background-color: #1f1f1f;
+}
+.step div:first-child:hover img {
+    filter: invert(100%);
+}
+.step div:first-child img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30px;
+    width: 30px;
+    filter: invert(70%) brightness(85%);
+}
+.step div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 5px;
+}
+.step div span {
+    font-size: .9em;
+    color: #b3b3b3;
+}
+.step div h2 {
+    font-size: 1em;
+    font-weight: 700;
+    color: #fff;
+}
+.form_box {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.input_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 5px;
+    width: 50%;
+    margin-bottom: 20px;
+}
+.section_box {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+.label {
+    font-size: .8em;
+    font-weight: 600;
+    color: #fff;
+} 
+.desc_label {
+    font-size: .8em;
+    font-weight: 400;
+    color: #b3b3b3;
+} 
+.desc_label a {
+    text-decoration: underline;
+}
+.input {
+    background-color: transparent;
+    outline: none;
+    color: #fff;
+    width: 95%;
+    border: 2px solid #b3b3b3;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+.valid_input {
+    border: 2px solid #b3b3b3;
+    outline: none;
+}
+.valid_input:hover {
+    border: 2px solid #fff;
+}
+.valid_input:focus {
+    border: 2px solid #fff;
+    outline: 1px solid #fff;
+}
+.invalid_input {
+    border: 2px solid #E53935;
+    outline: none;
+}
+.invalid_input:focus {
+    outline: 1px solid #E53935;
+}
+.input_field {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 95%;
+}
+.day_input {
+    flex: 1;
+}
+.month_input {
+    flex: 4;
+}
+.year_input {
+    flex: 2;
+}
+.radio_btn_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+}
+.radio_label {
+    font-size: .8em;
+    font-weight: 600;
+    color: #fff;
+    margin-right: 15px;
+}
+.btn {
+    background-color: #1ed760;
+    border: none;
+    color: #121212;
+    padding: 20px;
+    border-radius: 30px;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    width: 50%;
+    margin-top: 10px;
+}
+.btn:hover {
+    transform: scale(1.02);
+}
+.captcha {
+    margin-top: 10px;
+    font-size: .8em;
+    color: #b3b3b3;
+    text-align: center;
+}
+.captcha a {
+    color: #1ed760;
+    text-decoration: none;
+}
+.error_box {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.error_icn{
+    width: 25px;
+    height: 25px;
+}
+.error_msg {
+    font-size: 0.8em; 
+    color: #E53935; 
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield; /* Pour Firefox */
+    -webkit-appearance: none; /* Pour Chrome/Safari */
+    appearance: none;
+}
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+select {
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #b3b3b3;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+    background-image: url('/arrow_down.svg'); 
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+    background-size: 30px;
+}
+select option {
+    background-color: #121212;
+}
+select:focus {
+    outline: 1px solid #fff;
+    border: 2px solid #fff;
+}
+select::-webkit-scrollbar-track {
+    background-color: #1f1f1f;
+    border-radius: 10px;
+}
+input[type="radio"] {
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #b3b3b3;
+    width: 20px;
+    height: 20px;
+    transform: scale(0.8);
+    border-radius: 50%;
+    cursor: pointer;
+}
+input[type="radio"]:checked { 
+    border: 2px solid #1ed760;
+    outline: 3px solid #1ed760;
+}
+@media screen and (max-width: 750px) {
+    .container {
+        width: 100%;
+    }
+    .progress_container, .step, .input_box,
+    .requirements_box, .btn, .captcha {
+        width: 80%;
+    }
+}
+@media screen and (min-width: 750px) and (max-width: 1100px) {
+    .progress_container, .step, .input_box,
+    .requirements_box, .btn, .captcha {
+        width: 80%;
+    }
+}

@@ -1,0 +1,214 @@
+.register_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    background-color: #121212;
+    margin: auto;
+    padding: 20px;
+    user-select: none;
+}
+.register_box h1 {
+    width: 70%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.5em;
+    color: #fff;
+    margin-top: 0;
+}
+.logo_tarab {
+    width: 100px;
+    user-select: none;
+    margin: 10px;
+}
+.btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+    background-color: transparent;
+    font-size: 1em;
+    font-weight: 600;
+    color: #fff;
+    border: 2px solid #b3b3b3;
+    border-radius: 50px;
+    margin: 10px;
+    padding: 20px 10px;
+    cursor: pointer;
+}
+.btn:hover {
+    border: 2px solid #fff;
+    outline: 1px solid #fff;
+}
+.btn img {
+    position: absolute;
+    left: 50px;
+    width: 30px;
+    filter: brightness(0) saturate(100%) invert(100%);
+}
+.separate_line_ou {
+    width: 80%;
+    height: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+.separate_line_ou span{
+    color: #fff;
+    font-weight: 600;
+    margin: 0;
+}
+.separate_line_ou hr {
+    width: 30%;
+    color: #b3b3b3;
+    margin: 10px;
+    opacity: .2;
+}
+.seperate_line {
+    width: 50%;
+    color: #b3b3b3;
+    margin-top: 20px;
+    opacity: .2;
+}
+.form {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+.form_box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-bottom: 30px;
+}
+.label {
+    font-size: .8em;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 7px;
+}
+.input {
+    font-size: 1em;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: transparent;
+    color: #fff;
+} 
+.input::placeholder {
+    color: #b3b3b3;
+    font-size: 1em;
+}
+.error_box {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 0;
+    margin: auto;
+}
+.error_icn{
+    width: 25px;
+    height: 25px;
+}
+.error_msg {
+    font-size: 0.8em; 
+    color: #E53935; 
+    margin: 0;
+}
+.valid_input {
+    border: 2px solid #b3b3b3;
+    outline: none;
+}
+.valid_input:hover {
+    border: 2px solid #fff;
+}
+.valid_input:focus {
+    border: 2px solid #fff;
+    outline: 1px solid #fff;
+}
+.invalid_input {
+    border: 2px solid #E53935;
+    outline: none;
+}
+.invalid_input:focus {
+    outline: 1px solid #E53935;
+}
+.submit_btn {
+    font-size: 1em;
+    font-weight: 600;
+    width: 50%;
+    background-color: #1ed760;
+    color: #121212;
+    border: none;
+    border-radius: 50px;
+    padding: 20px;
+    cursor: pointer;
+}
+.submit_btn:hover {
+    transform: scale(1.02);
+}
+.link_phone {
+    color: #1ed760;
+    margin-top: 7px;
+}
+.redirect_login {
+    font-size: 1em;
+    color: #b3b3b3;
+    text-align: center;
+    margin: 20px 0;
+}
+.redirect_login a {
+    font-size: 1em;
+    color: #fff;
+    cursor: pointer;
+}
+/* Mobile (écran inférieur à 600px) */
+@media screen and (max-width: 750px) {
+    .register_box {
+        width: 70%;
+    }
+    .register_box h1, .redirect_login {
+        width: 110%;
+    }
+    .btn, .form_box, .submit_btn {
+        width: 120%;
+    }
+    .separate_line_ou, .seperate_line_ou hr {
+        width: 10%;
+    }
+    .seperate_line {
+        width: 100%;
+    }
+}
+
+/* Tablettes (écrans entre 600px et 1024px) */
+@media screen and (min-width: 750px) and (max-width: 1200px) {
+    .register_box {
+        width: 60%;
+    }
+    .register_box h1, .redirect_login {
+        width: 80%;
+    }
+    .btn, .form_box, .submit_btn {
+        width: 90%;
+    }
+    .separate_line_ou, .seperate_line_ou hr {
+        width: 150%;
+    }
+    .seperate_line {
+        width: 100%;
+    }
+}

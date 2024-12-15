@@ -1,0 +1,68 @@
+.footer_right {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 5px;
+}
+.control_btn {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.control_btn:nth-child(1)::after {
+    content: 'Vue en cours de lecture';
+}
+.control_btn:nth-child(2)::after {
+    content: 'Paroles';
+}
+.control_btn:nth-child(3)::after {
+    content: 'File d\'attente';
+}
+.control_btn:nth-child(4)::after {
+    content: 'Volume';
+}
+.control_btn:nth-child(5)::after {
+    content: 'Ouvrir le lecteur réduit';
+}
+.control_btn:last-child::after {
+    content: 'Plein écran';
+}
+.control_btn::after {
+    text-wrap: nowrap;
+    width: auto;
+    font-size: .9em;
+    font-weight: 600;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+}
+.control_btn:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .3s ease-out, visibility .3s ease-in;
+}
+.control_btn img {
+    width: 24px;
+    height: 24px;
+}
+.control_btn:hover img {
+    filter: brightness(0) saturate(100%) invert(100%);
+    transform: scale(1.05);
+}
+.volume {
+    width: 100px;
+    height: 5px;
+    background-color: #1ed760;
+    border-radius: 5px;
+    cursor: pointer;
+}
